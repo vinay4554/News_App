@@ -36,8 +36,8 @@ function Popuppage({popupvalue,setpopupvalue}){
                 dispatch(Categoryaction("entertainment"))
             }}>Entertainment News</div>
              <div onClick={() => {
-                dispatch(Categoryaction("general"))
-            }}>General News</div>
+                dispatch(Categoryaction("world"))
+            }}>World News</div>
              <div onClick={() => {
                 dispatch(Categoryaction("sports"))
             }}>Sports News</div>
@@ -45,14 +45,14 @@ function Popuppage({popupvalue,setpopupvalue}){
                 dispatch(Categoryaction("health"))
             }}>Health News</div>
             <div onClick={() => {
-               dispatch(Domainnewsaction("ndtv.com"))
-            }}> NDTV News</div>
+               dispatch(Categoryaction("science"))
+            }}> Science News</div>
              <div onClick={() => {
-                dispatch(Domainnewsaction("deccanchronicle.com"))
-            }}>Deccan Chronicle News</div>
+                dispatch(Categoryaction("breaking-news"))
+            }}>Breaking News</div>
              <div onClick={() => {
-                dispatch(Domainnewsaction("indianexpress.com"))
-            }}>Indian Express News</div>
+                dispatch(Categoryaction("nation"))
+            }}>Nation News</div>
         </div>
         </div>
          

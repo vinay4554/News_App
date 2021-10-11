@@ -6,7 +6,6 @@ import Topheadlines from "./components/Topheadlines";
 import About from "./components/About";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
-import Completenews from "./components/Completenews";
 import Everyheadline from "./components/Everyheadline";
 import { BrowserRouter as Router,Route,Switch} from "react-router-dom";
 function App() {
@@ -24,7 +23,6 @@ function App() {
         <Route path="/" exact component={Topheadlines} />
         <Route path="/Everyheadline" component={Everyheadline} />
         <Route path="/About" component={About} />
-        <Route path="/:details" component={Completenews} />
       </Switch>
       </Router>
     </div>

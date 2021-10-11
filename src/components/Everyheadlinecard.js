@@ -5,7 +5,7 @@ function Everyheadlinecard({article}){
         <div>
         <div className="card">
         <div className="image">
-                <img src={article.urlToImage} alt="" />
+                <img src={article.image} alt="" />
             </div>
             <div className="content">
                 <h2>{article.title}</h2>
