@@ -1,0 +1,72 @@
+.cards {
+  padding: 10px 15px;
+  display: grid;
+  grid-gap: 20px 15px;
+  grid-template-columns: 48% 48%;
+  justify-content: center;
+  color: white;
+}
+.App {
+  background-color: #474e5d;
+}
+.card {
+  display: grid;
+  grid-template-columns: 40% 56%;
+  column-gap: 15px;
+  text-align: justify;
+  height: 100%;
+  background-color: #5d5d61;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .content {
+    padding-bottom: 10px;
+    h2 {
+      font-family: "Merriweather", serif;
+    }
+    h3 {
+      font-family: "Open Sans", sans-serif;
+    }
+  }
+  .content a {
+    display: inline-block;
+    padding: 8px 12px;
+    text-align: center;
+    background-color: rgb(145, 207, 207);
+    color: black;
+    &:hover {
+      background-color: rgb(44, 153, 153);
+    }
+  }
+}
+.image img {
+  max-width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .App {
+    background-color: #474e5d;
+  }
+  .cards {
+    grid-template-columns: 99%;
+    // background-color: #474e5d;
+    color: white;
+  }
+  .card {
+    grid-template-columns: 100%;
+    font-size: 12px;
+    padding-bottom: 10px;
+    .content {
+      padding: 0 10px;
+      a {
+        font-size: 15px;
+        padding: 10px 18px;
+        background-color: rgb(145, 207, 207);
+        color: black;
+        &:hover {
+          background-color: rgb(44, 153, 153);
+        }
+      }
+    }
+  }
+}

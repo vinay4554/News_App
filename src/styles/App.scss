@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+@import "./header";
+@import "./nav";
+@import "./topheadlinecard.scss";
+@import "./search.scss";
+@import "./allnewssearch";
+@import "./about";

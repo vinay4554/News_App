@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
+import react, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import "./styles/App.scss"
+import {Newsaction} from "./actions/Newsaction";
+import Topheadlines from "./components/Topheadlines";
+import About from "./components/About";
+import Nav from "./components/Nav";
+import Header from "./components/Header";
+import Completenews from "./components/Completenews";
+import Everyheadline from "./components/Everyheadline";
+import { BrowserRouter as Router,Route,Switch} from "react-router-dom";
 function App() {
+  const[display,setDisplay]=useState(false)
+  const dispatch=useDispatch()
+  useEffect(() => {
+    dispatch(Newsaction());
+    },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Header display={display} setDisplay={setDisplay}/>
+      <Router>
+      {display &&  <Nav display={display} setDisplay={setDisplay}/>}
+      <Switch>
+        <Route path="/" exact component={Topheadlines} />
+        <Route path="/Everyheadline" component={Everyheadline} />
+        <Route path="/About" component={About} />
+        <Route path="/:details" component={Completenews} />
+      </Switch>
+      </Router>
     </div>
   );
 }

@@ -1,0 +1,83 @@
+.searchbar {
+  color: black;
+  padding-top: 70px;
+  padding-bottom: 25px;
+}
+.HEADER {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  padding: 15px;
+  border-bottom: 2px solid rgb(185, 169, 169);
+  .fatimesicon {
+    color: black;
+    padding-right: 70px;
+  }
+}
+.popup-content {
+  background-color: rgb(223, 223, 223);
+  box-shadow: rgba(175, 166, 166, 0.4) 0px 5px 15px;
+  border-radius: 10px;
+  position: fixed;
+  top: 20;
+  left: 0;
+  right: 0;
+  margin: 0 25px;
+  z-index: 10;
+}
+.sources {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  div {
+    border: none;
+    padding: 10px 0 10px 25px;
+  }
+}
+input[type="text"] {
+  padding: 10px 8px;
+  margin-right: 10px;
+  border: none;
+  width: 70%;
+  border-radius: 20px;
+}
+.input {
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+}
+.searchicon {
+  position: absolute;
+  padding-top: 10px;
+  right: 240px;
+}
+.pluscircle {
+  position: absolute;
+  padding-left: 22px;
+  padding-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  input[type="text"] {
+    padding-left: 14px;
+    border-radius: 20px;
+    width: 60%;
+    &:focus {
+      outline: none;
+    }
+  }
+  .searchicon {
+    color: black;
+    position: absolute;
+    padding-top: 10px;
+    right: 67px;
+  }
+  .pluscircle {
+    vertical-align: -0.325em;
+    color: black;
+    font-size: 20px;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 8px;
+    position: absolute;
+  }
+}

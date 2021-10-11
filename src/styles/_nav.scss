@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #222222;
+  padding-top: 50px;
+  z-index: 8;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  a {
+    color: white;
+    font-size: 28px;
+    display: inline-block;
+    padding: 15px 0 15px 40px;
+    letter-spacing: 5px;
+  }
+}
