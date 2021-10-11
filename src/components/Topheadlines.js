@@ -1,10 +1,13 @@
-import react from "react";
+import react,{useEffect} from "react";
 import { useSelector } from "react-redux";
 import Searchbar from "./Searchbar";
 import Topheadlinescard from "./Topheadlinescard";
 import { v4 as uuidv4 } from 'uuid';
 function Topheadlines(){
     const news=useSelector((state) => state["news"].topheadlines)
+    useEffect(() => {
+        dispatch(Newsaction());
+        },[])
     return(
         <>
          <Searchbar />
