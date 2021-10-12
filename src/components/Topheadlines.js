@@ -7,10 +7,10 @@ import Topheadlinescard from "./Topheadlinescard";
 import { v4 as uuidv4 } from 'uuid';
 function Topheadlines(){
     const dispatch=useDispatch();
+    // useEffect(() => {
+    //     dispatch(Newsaction());
+    //     },[])
     const news=useSelector((state) => state["news"].topheadlines)
-    useEffect(() => {
-        dispatch(Newsaction());
-        },[])
     return(
         <>
          <Searchbar />
