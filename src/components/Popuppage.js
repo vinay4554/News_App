@@ -1,9 +1,8 @@
-import react,{useEffect} from "react";
+import react from "react";
 import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Categoryaction } from "../actions/Newsaction";
-import { Domainnewsaction } from "../actions/Newsaction";
 
 function Popuppage({popupvalue,setpopupvalue}){
     const dispatch=useDispatch();

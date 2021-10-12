@@ -2,7 +2,6 @@ import react,{useState} from "react";
 import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { Everynewsaction } from "../actions/Newsaction";
 import { Searcheverynewsaction } from "../actions/Newsaction";
 
 function Allnewssearch(){

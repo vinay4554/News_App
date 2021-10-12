@@ -1,6 +1,6 @@
 import react, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch,faPlusCircle,faPlus,faAngleDoubleDown,faChevronCircleDown } from "@fortawesome/free-solid-svg-icons";
+import { faSearch,faChevronCircleDown } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import Popuppage from "./Popuppage";
 import { Searchaction } from "../actions/Newsaction";
