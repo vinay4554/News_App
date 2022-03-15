@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const Newsaction=() => async(dispatch) => {
-  const headlinesdata=await axios.get("https://gnews.io/api/v4/top-headlines?lang=en&country=in&token=8918e79048a3797e477bec6cdde1b951");
+  const headlinesdata=await axios.get(`https://gnews.io/api/v4/top-headlines?lang=en&country=in&token=${process.env.REACT_APP_API_KEY}`);
    dispatch({
        type:"FETCH_NEWS",
        information:{
@@ -10,7 +10,7 @@ export const Newsaction=() => async(dispatch) => {
    })
 }
 export const Categoryaction=(category) => async(dispatch) => {
-    const categoryheadlinesdata=await axios.get(`https://gnews.io/api/v4/top-headlines?topic=${category}&lang=en&country=in&token=8918e79048a3797e477bec6cdde1b951`);
+    const categoryheadlinesdata=await axios.get(`https://gnews.io/api/v4/top-headlines?topic=${category}&lang=en&country=in&token=${process.env.REACT_APP_API_KEY}`);
     dispatch({
         type:"FETCH_NEWS",
         information:{
@@ -20,7 +20,7 @@ export const Categoryaction=(category) => async(dispatch) => {
 
 }
 export const Searchaction=(searchvalue) => async (dispatch) => {
-    const searchheadlinesdata=await axios.get(`https://gnews.io/api/v4/search?lang=en&country=in&q=${searchvalue}&token=8918e79048a3797e477bec6cdde1b951`);
+    const searchheadlinesdata=await axios.get(`https://gnews.io/api/v4/search?lang=en&country=in&q=${searchvalue}&token=${process.env.REACT_APP_API_KEY}`);
     dispatch({
         type:"FETCH_NEWS",
         information:{
@@ -30,7 +30,7 @@ export const Searchaction=(searchvalue) => async (dispatch) => {
 
 }
 export const Searcheverynewsaction=(value) => async (dispatch) => {
-    const everyheadlinesdata=await axios.get(`https://gnews.io/api/v4/search?lang=en&country=in&q=${value}&token=8918e79048a3797e477bec6cdde1b951`);
+    const everyheadlinesdata=await axios.get(`https://gnews.io/api/v4/search?lang=en&country=in&q=${value}&token=${process.env.REACT_APP_API_KEY}`);
     dispatch({
         type:"DAILY_NEWS",
         information:{
@@ -40,7 +40,7 @@ export const Searcheverynewsaction=(value) => async (dispatch) => {
 
 }
 export const Everynewsaction=(value="example") => async (dispatch) => {
-    const everyheadlinesdata=await axios.get(`https://gnews.io/api/v4/search?lang=en&country=in&q=${value}&token=8918e79048a3797e477bec6cdde1b951`);
+    const everyheadlinesdata=await axios.get(`https://gnews.io/api/v4/search?lang=en&country=in&q=${value}&token=${process.env.REACT_APP_API_KEY}`);
     dispatch({
         type:"DAILY_NEWS",
         information:{

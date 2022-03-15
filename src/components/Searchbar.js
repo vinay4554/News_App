@@ -16,6 +16,12 @@ function Searchbar(){
         dispatch(Searchaction(value))
         setValue("")
     }
+    const handleSearch=(e) => {
+        if (e.key === 'Enter') {
+            dispatch(Searchaction(value))
+           setValue("")
+          }
+    }
     return(
         <div className="searchbar">
         {popupvalue && <Popuppage popupvalue={popupvalue} setpopupvalue={setpopupvalue}/>}
@@ -29,6 +35,7 @@ function Searchbar(){
         <input type="text"
               value={value}
               onChange={handleChange}
+              onKeyDown={handleSearch}
         />
          <FontAwesomeIcon 
       icon={faSearch} 

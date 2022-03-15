@@ -8,6 +8,7 @@ import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Everyheadline from "./components/Everyheadline";
 import { BrowserRouter as Router,Route,Switch} from "react-router-dom";
+
 function App() {
   const[display,setDisplay]=useState(false)
   const dispatch=useDispatch()
