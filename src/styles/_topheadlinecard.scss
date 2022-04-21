@@ -8,12 +8,13 @@
 }
 .App {
   background-color: #474e5d;
+  height: 100vh;
 }
 .card {
   display: grid;
   grid-template-columns: 40% 56%;
   column-gap: 15px;
-  text-align: justify;
+  // text-align: justify;
   height: 100%;
   background-color: #5d5d61;
   &:hover {
