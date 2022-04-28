@@ -1,3 +1,18 @@
+# News App
+
+## Live Link:
+
+[Click Here!](https://all-in-one-news-app.netlify.app/)
+
+
+# About This App
+
+Developed an web application where users can check daily news.
+By using this application one can be able to know The top headlines from different articles published.
+The user can either search by keywords for particular news or can select particular category as they wish.
+Data fetched from NEWS API
+Technologies used : React.js,Scss,NEWS API
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
